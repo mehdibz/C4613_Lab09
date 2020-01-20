@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE xml>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+   
+    <tlib-version>1.0</tlib-version>
+    <short-name>df</short-name>
+    <uri>http://bcit.ca/comp4613/calltag/dateFunction.tld</uri>
+    <function>
+        <name>getFooterDate</name>
+        <function-class>a00123456.lab.tags.PrintFormattedDate</function-class>
+        <function-signature>java.lang.String getFooterDate( java.lang.String )
+        </function-signature>
+    </function>    
+</taglib>

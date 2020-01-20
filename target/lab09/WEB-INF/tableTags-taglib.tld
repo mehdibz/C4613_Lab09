@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+  http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<tlib-version>1.0</tlib-version>
+	<short-name>a00123456</short-name>
+
+	<tag>
+		<description>Displays result headers</description>
+		<name>headers</name>
+		<tag-class>a00123456.lab.tags.HeadersTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>headerVector</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>headerColor</name>
+			<required>false</required>
+		</attribute>
+	</tag>
+
+	<tag>
+		<description>Displays result rows</description>
+		<name>rows</name>
+		<tag-class>a00123456.lab.tags.RowsTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>vectorRows</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>oddRowColor</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>evenRowColor</name>
+			<required>false</required>
+		</attribute>
+	</tag>
+
+</taglib>

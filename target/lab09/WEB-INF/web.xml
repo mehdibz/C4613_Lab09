@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+
+    
+   <servlet>
+      <servlet-name>Faces Servlet</servlet-name>
+      <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>Faces Servlet</servlet-name>
+      <url-pattern>/WEB-INF/jsp/output.xhtml</url-pattern>
+      <url-pattern>/WEB-INF/jsp/login.xhtml</url-pattern>
+   </servlet-mapping>
+    
+    
+    <!-- Main application Servlet controller -->
+  <servlet>
+    <servlet-name>LabServlet</servlet-name>
+    <servlet-class>a00123456.lab.LabServlet</servlet-class>
+  </servlet>
+  
+  <!-- map URL to main Servlet -->
+  <servlet-mapping>
+    <servlet-name>LabServlet</servlet-name>
+    <url-pattern>/lab</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Register the name "UserSessionFilter" for UserSessionFilter. -->
+  <filter>
+    <filter-name>UserSessionFilter</filter-name>
+    <filter-class>
+      a00123456.lab.filters.UserSessionFilter
+    </filter-class>
+  </filter>
+  
+  <!-- Apply the UserSessionFilter filter to the servlet named "/lab". -->
+  <filter-mapping>
+    <filter-name>UserSessionFilter</filter-name>
+    <url-pattern>/user.jsp</url-pattern>
+  </filter-mapping>
+
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Protect users page. Admin or user role only. -->
+   <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Search</web-resource-name>
+      <url-pattern>/user.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+      <role-name>user</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+ 
+  <!-- Tell the server to use FORM authentication. -->
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/WEB-INF/jsp/login.xhtml</form-login-page>
+      <form-error-page>/WEB-INF/jsp/login-error.jsp</form-error-page>
+    </form-login-config>
+  </login-config>
+  
+  <jsp-config>
+		<taglib>
+		 <taglib-uri>http://bcit.ca/comp4613/calltag/dateFunction.tld</taglib-uri>
+		 <taglib-location>/WEB-INF/DateFunction.tld</taglib-location>
+		</taglib>
+	</jsp-config>	
+  
+</web-app>

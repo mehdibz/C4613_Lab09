@@ -1,0 +1,158 @@
+.errorMessage {
+   color: red; 
+}
+.columnHeader {
+   font-style: bold;
+}
+.columnFooter {
+   font-size: 0.75em;
+}
+
+.names {
+   border: thin solid black;
+}
+.namesHeader {
+   text-align: center;
+   font-style: italic;
+   color: Snow;
+   background: Teal;
+}
+.last {
+   height: 25px;
+   text-align: center;
+   background: MediumTurquoise;
+}
+.first {
+   text-align: left;
+   background: PowderBlue;
+}
+
+
+.customers {
+   border: thin solid black;
+}
+.customersHeader {
+   text-align: center;
+   font-style: italic;
+   color: Snow;
+   background: Teal;
+}
+.customersFooter {
+   font-size: 0.75em;
+   text-align: center;
+   background: PowderBlue;
+}
+.delete {
+   text-align: center;
+   color: Black;
+   background: Red;
+}
+.custid {
+   height: 25px;
+   text-align: center;
+   background: MediumTurquoise;
+}
+.name {
+   text-align: left;
+   background: MediumTurquoise;
+}
+.firstName {
+   width: 6em;
+   text-align: left;
+   color: Black;
+   background: PowderBlue;
+}
+.phone{
+	width: 7em;
+   text-align: left;
+   color: Black;
+   background: PowderBlue;
+}
+.address{
+	width: 25em;
+   text-align: left;
+   color: Black;
+   background: PowderBlue;
+}
+.age {
+   width: 3em;
+   text-align: center;
+   color: Black;
+   background: PowderBlue;
+}
+.sex {
+   width: 3em;
+   text-align: center;
+   color: Black;
+   background: MediumTurquoise;
+}
+.city {
+   width: 9em;
+   text-align: center;
+   color: Black;
+   background: PowderBlue;
+}
+.state {
+   width: 3em;
+   text-align: center;
+   color: Black;
+   background: MediumTurquoise;
+}
+.zip {
+   width: 6em;
+   text-align: center;
+   background: PowderBlue;
+}
+.evenRow {
+   background: #FFF;
+}
+.oddRow {
+   background: #CCC;
+}
+.pageLink {
+   font-size: 0.75em;
+}
+.editableControl {
+   text-align:Left;
+}
+.controlPanel {
+   text-align:left;
+}
+.page {
+   text-align:left;
+}
+.bulbImage {
+   border-width: 0px;
+}
+.emphasis {
+   font-size: 1.35em;
+   font-style: italic;
+}
+.value {
+   font-style: italic;
+}
+.controlLeft {
+   width: 45px;
+   vertical-align: top;
+   text-align:left;
+}
+.controlMiddle {
+   width: 50px;
+   vertical-align: top;
+   text-align:left;
+}
+.controlRight {
+   width: 40px;
+   vertical-align: top;
+   text-align:left;
+}
+.pageLinks {
+   border: thin solid Black;
+   background: PowderBlue;
+}
+.mainDoc {
+position: CENTER;
+padding: 0 0 20px 0; /*top right bottom left*/ 
+margin-top: 200px; 
+/*margin-left:5px;*/
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core" 
+      xmlns:h="http://java.sun.com/jsf/html">
+   <h:head>
+      <h:outputStylesheet library="css" name="styles.css"/>
+      <title>#{msgs.pageTitle}</title>
+   </h:head>
+		<h:body>
+		<div id="mainDoc">
+		<h:panelGroup layout="block" />
+			<h:form>
+				<h:dataTable value="#{results}" var="employee"
+		                      
+		                      rowClasses="oddRow,evenRow">
+		                     
+		                    <h:column>
+				               <f:facet name="header">#{msgs.id}</f:facet>
+				               #{employee.ID}
+				            </h:column>
+				            <h:column>
+				               <f:facet name="header">#{msgs.firstName}</f:facet>
+				               #{employee.firstName}
+				            </h:column>
+				            <h:column>
+				               <f:facet name="header">#{msgs.lastName}</f:facet>
+				               #{employee.lastName}
+				            </h:column>
+				            <h:column>
+				               <f:facet name="header">#{msgs.dob}</f:facet>
+				               #{employee.dob}
+				            </h:column>
+		         </h:dataTable>
+	         </h:form>
+	         </div>
+	         </h:body>
+ </html>
